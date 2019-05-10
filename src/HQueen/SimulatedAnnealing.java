@@ -1,47 +1,46 @@
+package HQueen;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package HQueen;
 
 /**
  *
- * @author vitor
+ * @author Victor Augusto Pozza
  */
-public class SimulatedAnnealing {
-    
-    int temperaturaInicial;
-    int constResfriamento;
-    int temperaturaFinal;
-    Casa[][] tabuleiro;
+public class SimulatedAnnealing extends NQueen {
 
+    double tempreture;
 
-    public SimulatedAnnealing(int temperaturaInicial, int constResfriamento, int temperaturaFinal) {
-        this.temperaturaInicial = temperaturaInicial;
-        this.constResfriamento = constResfriamento;
-        this.temperaturaFinal = temperaturaFinal;
-    }
-    
-    public Casa[][] getTabuleiro() {
-        return tabuleiro;
+    SimulatedAnnealing(int boardSize, int tollerence, double tempreture) {
+        super(boardSize, tollerence);
+        this.tempreture = tempreture;
+        currentState = new SimulatedAnnealingState(boardSize);
     }
 
-    public void setTabuleiro(Casa[][] tabuleiro) {
-        this.tabuleiro = tabuleiro;
-    }
-    
-    public void start(){
-        
-        while (temperaturaInicial < temperaturaFinal){
-            
+    @Override
+    public void solve() {
+        while (!isSolvedPossition(currentState)) {
+            double temperature;
+            double delta;
+            double probability;
+            double rand;
+
+
+            for (temperature = this.tempreture; (temperature > 0) && (currentState.getCost() != 0); temperature--) {
+                nextState = currentState.getNextState();
+                delta = currentState.getCost() - nextState.getCost();
+                probability = Math.exp(delta / temperature);
+                rand = Math.random();
+
+                if (delta > 0) {
+                    currentState = nextState;
+                } else if (rand <= probability) {
+                    currentState = nextState;
+                }
+            }
         }
-      
     }
-    
-    
-    
-    
-    
-    
 }
