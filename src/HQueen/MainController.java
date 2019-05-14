@@ -5,15 +5,25 @@
  */
 package HQueen;
 
-import static javafx.application.ConditionalFeature.FXML;
+import java.awt.geom.Rectangle2D;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.net.URL;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.image.Image;
 
 /**
  *
  * @author vitor
  */
-public class MainController {
+public class MainController implements Initializable {
     
     @FXML
     private ImageView casa65;
@@ -206,26 +216,35 @@ public class MainController {
 
     @FXML
     private ImageView casa07;
-    
-    long time;
-    NQueen nq;
+       
     int tollerence = 0;
-    int[][] matrizImgView = new int[8][8];
+    NQueen nq;
     
-    public void inicialize(){
-        nq = new SimulatedAnnealing(8,tollerence,1000);
+    public void solve(){  
+        long time;
+            
         time = System.currentTimeMillis();
+        nq.solve();
+        time = System.currentTimeMillis()-time;
+        nq.show();
+        
+        System.out.println("Total Time taken :" + time);
+  
+    }
+    
+    public void esparramarRainhas(){       
+        Image img = new Image("Imagens/rainha.jpg");
+        casa07.setImage(img);
+
+        System.out.println("N = 8");
+        System.out.println("Simulated Annealing approach");
+        
+        nq = new SimulatedAnnealing(8,tollerence,1000);
         nq.showInicialPosition();
     }
     
-    public void inicializaTabuleiro(){
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                
-            }
-        }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
     }
-    
-    
-    
 }

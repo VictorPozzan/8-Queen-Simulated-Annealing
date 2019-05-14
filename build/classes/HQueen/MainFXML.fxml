@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Menu?>
@@ -15,12 +21,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HQueen.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HQueen.MainController">
    <bottom>
       <Pane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="148.0" layoutY="27.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="305.0" text="Let's Vamos" />
+            <Button fx:id="solve" layoutX="331.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#solve" prefHeight="47.0" prefWidth="172.0" text="Resolver" />
+            <Button fx:id="esparramar" layoutX="98.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#esparramarRainhas" prefHeight="47.0" prefWidth="172.0" text="Esparramar Rainhas" />
          </children>
       </Pane>
    </bottom>
@@ -139,7 +145,7 @@
             <ImageView fx:id="casa16" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <ImageView fx:id="casa06" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
             <ImageView fx:id="casa75" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa00" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView id="i00" fx:id="casa00" fitHeight="38.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="casa77" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7" />
             <ImageView fx:id="casa67" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7" />
             <ImageView fx:id="casa57" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7" />

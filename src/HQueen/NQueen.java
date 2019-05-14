@@ -1,5 +1,8 @@
 package HQueen;
 
+import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -72,8 +75,9 @@ abstract class NQueen {
 
                     }
                 }
-
                 if (queen) {
+                    
+
                     System.out.print("" + temp + "\t");
                     queen = false;
                 } else {
