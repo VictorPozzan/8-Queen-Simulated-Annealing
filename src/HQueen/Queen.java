@@ -8,7 +8,7 @@ package HQueen;
 
 /**
  *
- * @author Victor Augusto Pozza
+ * @author Victor Augusto Pozzan
  */
 class Queen {
     int indexOfX, indexOfY;
@@ -18,9 +18,7 @@ class Queen {
 		this.indexOfY = indexOfY;
 	}
 
-
-
-	public void setIndexOfX(int indexOfX) {
+        public void setIndexOfX(int indexOfX) {
 		this.indexOfX = indexOfX;
 	}
 

@@ -3,15 +3,9 @@ package HQueen;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
- * @author Victor Augusto Pozza
+ * @author Victor Augusto Pozzan
  */
 abstract class NQueen {
 
@@ -19,11 +13,9 @@ abstract class NQueen {
     protected State currentState, nextState;
     protected int tollerenceCost;
 
-    public NQueen(int boardSize, int tollrence) {
-        this.boardSize = boardSize;
+    public NQueen(int tollrence) {
+        this.boardSize = 8;
         this.tollerenceCost = tollrence;
-        if (boardSize<4)
-        throw new UnsupportedOperationException("No of N should be more than 3 to solve the problem");
     }
 
     abstract public void solve();

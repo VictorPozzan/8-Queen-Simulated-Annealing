@@ -232,14 +232,14 @@ public class MainController implements Initializable {
   
     }
     
-    public void esparramarRainhas(){       
-        Image img = new Image("Imagens/rainha.jpg");
-        casa07.setImage(img);
+    public void randomQueens(){       
+        Image img = new Image("Imagens/crown.png");
+        casa00.setImage(img);
 
         System.out.println("N = 8");
         System.out.println("Simulated Annealing approach");
         
-        nq = new SimulatedAnnealing(8,tollerence,1000);
+        nq = new SimulatedAnnealing(tollerence,1000);
         nq.showInicialPosition();
     }
     

@@ -8,16 +8,16 @@ package HQueen;
 
 /**
  *
- * @author Victor Augusto Pozza
+ * @author Victor Augusto Pozzan
  */
 public class SimulatedAnnealing extends NQueen {
 
     double tempreture;
 
-    SimulatedAnnealing(int boardSize, int tollerence, double tempreture) {
-        super(boardSize, tollerence);
+    SimulatedAnnealing(int tollerence, double tempreture) {
+        super(tollerence);
         this.tempreture = tempreture;
-        currentState = new SimulatedAnnealingState(boardSize);
+        currentState = new SimulatedAnnealingState(8);
     }
 
     @Override

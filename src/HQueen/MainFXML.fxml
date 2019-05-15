@@ -22,139 +22,396 @@
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HQueen.MainController">
-   <bottom>
-      <Pane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="solve" layoutX="331.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#solve" prefHeight="47.0" prefWidth="172.0" text="Resolver" />
-            <Button fx:id="esparramar" layoutX="98.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#esparramarRainhas" prefHeight="47.0" prefWidth="172.0" text="Esparramar Rainhas" />
-         </children>
-      </Pane>
-   </bottom>
-   <top>
-      <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <MenuBar>
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <Pane prefHeight="85.0" prefWidth="600.0">
-               <children>
-                  <Text layoutX="203.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H Queens">
-                     <font>
-                        <Font name="Khmer OS" size="43.0" />
-                     </font>
-                  </Text>
-               </children>
-            </Pane>
-         </children>
-      </VBox>
-   </top>
-   <right>
-      <GridPane gridLinesVisible="true" prefHeight="287.0" prefWidth="500.0" BorderPane.alignment="CENTER">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <BorderPane.margin>
-            <Insets left="100.0" right="100.0" />
-         </BorderPane.margin>
-         <children>
-            <ImageView fx:id="casa65" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa10" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-            <ImageView fx:id="casa42" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa32" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa22" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa12" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa02" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa71" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa61" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa51" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa41" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa31" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa21" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa11" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa50" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
-            <ImageView fx:id="casa01" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
-            <ImageView fx:id="casa70" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
-            <ImageView fx:id="casa60" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
-            <ImageView fx:id="casa40" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
-            <ImageView fx:id="casa30" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
-            <ImageView fx:id="casa20" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
-            <ImageView fx:id="casa55" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa45" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa35" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa25" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa15" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa05" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />
-            <ImageView fx:id="casa74" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa64" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa54" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa34" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa44" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa24" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa04" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa73" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa63" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa53" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa43" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa33" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa23" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa13" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa03" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
-            <ImageView fx:id="casa72" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa62" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa52" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <ImageView fx:id="casa14" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ImageView fx:id="casa76" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa66" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa56" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa46" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa36" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa26" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa16" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa06" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
-            <ImageView fx:id="casa75" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <ImageView id="i00" fx:id="casa00" fitHeight="38.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="casa77" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa67" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa57" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa47" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa37" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa27" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa17" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <ImageView fx:id="casa07" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />
-         </children>
-      </GridPane>
-   </right>
+    <bottom>
+        <Pane prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="solve" layoutX="331.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#solve" prefHeight="47.0" prefWidth="172.0" text="Resolver" />
+                <Button layoutX="98.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#randomQueens" prefHeight="47.0" prefWidth="172.0" text="Random Queens" />
+            </children>
+        </Pane>
+    </bottom>
+    <top>
+        <VBox prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <Pane prefHeight="85.0" prefWidth="600.0">
+                    <children>
+                        <Text layoutX="203.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="H Queens">
+                            <font>
+                                <Font name="Khmer OS" size="43.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </top>
+    <right>
+        <GridPane id="GridPane" gridLinesVisible="true" prefHeight="287.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <BorderPane.margin>
+                <Insets left="100.0" right="100.0" />
+            </BorderPane.margin>
+            <children>
+            
+                <Pane fx:id="pane00" prefHeight="18.0" prefWidth="23.0">
+                    <children>
+                        <ImageView fx:id="casa00" fitHeight="40.0" fitWidth="52.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane01" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1">
+                    <children>
+                        <ImageView fx:id="casa01" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />            
+                    </children>
+                </Pane>
+                <Pane fx:id="pane02" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2">
+                    <children>
+                        <ImageView fx:id="casa02" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane03" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3">
+                    <children>
+                        <ImageView fx:id="casa03" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>    
+                <Pane fx:id="pane04" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4">
+                    <children>
+                        <ImageView fx:id="casa04" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane05" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5">
+                    <children>
+                        <ImageView fx:id="casa05" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" />          
+                    </children>
+                </Pane>
+                <Pane fx:id="pane06" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa06" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane07" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa07" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />    
+                    </children>
+                </Pane>
+                <Pane fx:id="pane10" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa10" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7" />    
+                    </children>
+                </Pane>
+                <Pane fx:id="pane11" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa11" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane12" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="1" >
+                    <children>          
+                        <ImageView fx:id="casa12" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane13" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa13" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane14" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa14" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane15" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa15" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane16" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa16" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane17" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="1" >
+                    <children>
+                        <ImageView fx:id="casa17" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane20" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa20" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane21" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa21" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane22" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa22" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane23" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa23" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane24" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa24" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane25" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa25" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane26" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa26" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane27" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="2" >
+                    <children>
+                        <ImageView fx:id="casa27" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane30" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa30" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane31" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa31" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane32" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa32" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane33" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa33" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane34" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa34" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane35" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa35" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                    </children>            
+                </Pane>
+                <Pane fx:id="pane36" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa36" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane37" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="3" >
+                    <children>
+                        <ImageView fx:id="casa37" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane40" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa40" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane41" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa41" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane42" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa42" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane43" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa43" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane44" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa44" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane45" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa45" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane46" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa46" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane47" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="4" >
+                    <children>
+                        <ImageView fx:id="casa47" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane50" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa50" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane51" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa51" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane52" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa52" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane53" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa53" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane54" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa54" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane55" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa55" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane56" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa56" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane57" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="5" >
+                    <children>
+                        <ImageView fx:id="casa57" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane60" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa60" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane61" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa61" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane62" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa62" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane63" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa63" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane64" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa64" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane65" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa65" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane66" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa66" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane67" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="6" >
+                    <children>
+                        <ImageView fx:id="casa67" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane70" prefHeight="18.0" prefWidth="23.0" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa70" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane71" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="1" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa71" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane72" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="2" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa72" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane73" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="3" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa73" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane74" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="4" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa74" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane75" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="5" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa75" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane76" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="6" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa76" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+                    </children>
+                </Pane>
+                <Pane fx:id="pane77" prefHeight="18.0" prefWidth="23.0" GridPane.columnIndex="7" GridPane.rowIndex="7" >
+                    <children>
+                        <ImageView fx:id="casa77" fitHeight="38.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+                    </children>
+                </Pane>
+            </children>
+        </GridPane>
+    </right>
 </BorderPane>

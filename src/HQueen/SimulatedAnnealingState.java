@@ -8,7 +8,7 @@ package HQueen;
 import java.util.Random;
 /**
  *
- * @author Victor Augusto Pozza
+ * @author Victor Augusto Pozzan
  */
 class SimulatedAnnealingState extends  State{
   Random randomGenerator = new Random();
@@ -25,8 +25,7 @@ class SimulatedAnnealingState extends  State{
         this.q = q;
         cost = 0;
     }
-
-
+    
     @Override
     public State getNextState() {
         int i;

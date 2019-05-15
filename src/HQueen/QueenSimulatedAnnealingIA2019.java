@@ -26,6 +26,7 @@ public class QueenSimulatedAnnealingIA2019 extends Application {
     public void start(Stage primaryStage) throws IOException {
         Pane root = FXMLLoader.load(getClass().getResource("MainFXML.fxml"));
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("StyleTable.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();

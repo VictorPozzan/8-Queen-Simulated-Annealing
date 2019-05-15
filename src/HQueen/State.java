@@ -5,11 +5,11 @@ package HQueen;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.util.Random;
+
 /**
  *
- * @author Victor Augusto Pozza
+ * @author Victor Augusto Pozzan
  */
 abstract class State {
 
@@ -31,7 +31,7 @@ abstract class State {
         cost = 0;
     }
 
-   abstract public State getNextState();
+    abstract public State getNextState();
 
     public void calculateCost() {
         int i, j;
@@ -39,7 +39,9 @@ abstract class State {
 
         for (i = 0; i < boardSize; i++) {
             for (j = 0; j < boardSize; j++) {
-                if (i==j) continue;
+                if (i == j) {
+                    continue;
+                }
                 if (q[i].getIndexOfX() == q[j].getIndexOfX() // same row
                         || q[i].getIndexOfY() == q[j].getIndexOfY() //same column
                         || (q[i].getIndexOfX() - q[j].getIndexOfX() == q[i].getIndexOfY() - q[j].getIndexOfY()) // same diagonal
