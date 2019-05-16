@@ -241,7 +241,16 @@ public class MainController implements Initializable {
   
     }
     @FXML
-    public void randomQueens(){       
+    public void randomQueens(){   
+        
+        for(int i = 0; i < 8; i++)
+        {
+            for(int j = 0; j< 8; j++)
+            {
+                tabuleiro[i][j].setImage(null);
+            }
+        }
+ 
         System.out.println("N = 8");
         System.out.println("Simulated Annealing approach");
         
