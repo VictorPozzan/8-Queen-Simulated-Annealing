@@ -1,6 +1,7 @@
 package HQueen;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 /**
@@ -20,7 +21,8 @@ abstract class NQueen {
 
     abstract public void solve();
 
-    public void showInicialPosition(){
+    public void showInicialPosition(ImageView tabuleiro[][]){
+        Image img = new Image("Imagens/crown.png");
         System.out.println("This is the inicial Position");
                 int temp = 0;
         Queen q[] = currentState.getQueens();
@@ -39,6 +41,7 @@ abstract class NQueen {
                 }
 
                 if (queen) {
+                    tabuleiro[i][j].setImage(img);
                     System.out.print("" + temp + "");
                     queen = false;
                 } else {
@@ -50,7 +53,8 @@ abstract class NQueen {
         }
     }
     
-    public void show() {
+    public void show(ImageView tabuleiro[][]) {
+        Image img = new Image("Imagens/crown.png");
         System.out.println("Total Cost of " + currentState.getCost());
         int temp = 0;
         Queen q[] = currentState.getQueens();
@@ -69,7 +73,7 @@ abstract class NQueen {
                 }
                 if (queen) {
                     
-
+                    tabuleiro[i][j].setImage(img);
                     System.out.print("" + temp + "\t");
                     queen = false;
                 } else {
