@@ -7,18 +7,19 @@ package HQueen;
 
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
+ * Aplicação JavaFX com estilo para executar o algoritmo Simulated Annealing
+ * para o problema das 8 rainhas
  *
- * @author vitor
+ * @author Emerson Hoffmann
+ * @author Leonardo Aparecido Caracho
+ * @author Victor Augusto Pozzan
+ * @author Vitor Lisboa Nogueira
  */
 public class QueenSimulatedAnnealingIA2019 extends Application {
 

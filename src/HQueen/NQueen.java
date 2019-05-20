@@ -1,92 +1,97 @@
 package HQueen;
 
-import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 /**
+ * Esta classe abstrata tem como serventia apresentar as soluções
  *
+ * @author Emerson Hoffmann
+ * @author Leonardo Aparecido Caracho
  * @author Victor Augusto Pozzan
+ * @author Vitor Lisboa Nogueira
  */
 abstract class NQueen {
 
-    protected int boardSize;
-    protected State currentState, nextState;
-    protected int tollerenceCost;
+    protected int tamTabuleiro = 8;
+    protected State estadoAtual, proxEstado;
+    protected int tolerancia;
 
-    public NQueen(int tollrence) {
-        this.boardSize = 8;
-        this.tollerenceCost = tollrence;
+    public NQueen(int tolerancia) {
+        this.tolerancia = tolerancia;
     }
 
     abstract public void solve();
 
-    public void showInicialPosition(ImageView tabuleiro[][]){
+//este método mostra tanto no terminal quanto no FXML as rainhas espalhadas no tabuleiro    
+    public void showInicialPosition(ImageView tabuleiro[][]) {
         Image img = new Image("Imagens/crown.png");
-        System.out.println("This is the inicial Position");
-                int temp = 0;
-        Queen q[] = currentState.getQueens();
+        System.out.println("Posicao Atual:");
+        int rainha = 0;
+        Queen q[] = estadoAtual.getQueens();
         boolean queen = false;
         System.out.println();
 
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                for (int k = 0; k < boardSize; k++) {
-                    if (i == q[k].getIndexOfX() && j == q[k].getIndexOfY()) {
+        for (int i = 0; i < tamTabuleiro; i++) {
+            for (int j = 0; j < tamTabuleiro; j++) {
+                for (int k = 0; k < tamTabuleiro; k++) {
+                    if (i == q[k].getX() && j == q[k].getY()) {
                         queen = true;
-                        temp = k;
+                        rainha = k;
                         break;
 
                     }
                 }
-
+                System.out.print("|");
                 if (queen) {
                     tabuleiro[i][j].setImage(img);
-                    System.out.print("" + temp + "");
+                    System.out.print(" " + rainha + " ");
                     queen = false;
                 } else {
-                    System.out.print("|*|");
+                    System.out.print(" * ");
                 }
+                System.out.print("");
             }
 
-            System.out.println();
+            System.out.println("|");
         }
     }
-    
+
+//este método mostra tanto no terminal quanto no FXML a solução final    
     public void show(ImageView tabuleiro[][]) {
         Image img = new Image("Imagens/crown.png");
-        System.out.println("Total Cost of " + currentState.getCost());
-        int temp = 0;
-        Queen q[] = currentState.getQueens();
+        int rainha = 0;
+        Queen q[] = estadoAtual.getQueens();
         boolean queen = false;
         System.out.println();
 
-        for (int i = 0; i < boardSize; i++) {
-            for (int j = 0; j < boardSize; j++) {
-                for (int k = 0; k < boardSize; k++) {
-                    if (i == q[k].getIndexOfX() && j == q[k].getIndexOfY()) {
+        for (int i = 0; i < tamTabuleiro; i++) {
+            for (int j = 0; j < tamTabuleiro; j++) {
+                for (int k = 0; k < tamTabuleiro; k++) {
+                    if (i == q[k].getX() && j == q[k].getY()) {
                         queen = true;
-                        temp = k;
+                        rainha = k;
                         break;
-
                     }
                 }
+                System.out.print("|");
                 if (queen) {
-                    
                     tabuleiro[i][j].setImage(img);
-                    System.out.print("" + temp + "\t");
+                    System.out.print(" " + rainha + " ");
                     queen = false;
                 } else {
-                    System.out.print("*\t");
+                    System.out.print(" * ");
                 }
+                System.out.print("");
             }
 
-            System.out.println();
+            System.out.println("|");
         }
     }
 
+    //retorna true se o custo do estado é menor igual  que a tollerancia que é 0
     protected boolean isSolvedPossition(State s) {
-        if (s.getCost() <= tollerenceCost) {
+        if (s.getCost() <= tolerancia) {
             return true;
         }
         return false;

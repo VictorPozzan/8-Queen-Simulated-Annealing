@@ -1,48 +1,46 @@
 package HQueen;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
+ * A classe rainha tem informações sobre a posição da rainha no tabuleiro Os
+ * métodos são os getters e setters da posição e a movimentação da rainha
  *
+ * @author Emerson Hoffmann
+ * @author Leonardo Aparecido Caracho
  * @author Victor Augusto Pozzan
+ * @author Vitor Lisboa Nogueira
+ *
  */
 class Queen {
-    int indexOfX, indexOfY;
 
-	public Queen(int indexOfX, int indexOfY) {
-		this.indexOfX = indexOfX;
-		this.indexOfY = indexOfY;
-	}
+    int X, Y;
 
-        public void setIndexOfX(int indexOfX) {
-		this.indexOfX = indexOfX;
-	}
+    public Queen(int x, int y) {
+        this.X = x;
+        this.Y = y;
+    }
 
-	public void setIndexOfY(int indexOfY) {
-		this.indexOfY = indexOfY;
-	}
+    public void setX(int x) {
+        this.X = x;
+    }
 
-	public int getIndexOfX() {
-		return indexOfX;
-	}
+    public void setY(int y) {
+        this.Y = y;
+    }
 
-	public int getIndexOfY() {
-		return indexOfY;
-	}
-        public void moveLeft(){
-            indexOfY--;
-        }
-        public void moveRight(){
-            indexOfY++;
-        }
+    public int getX() {
+        return X;
+    }
 
-    @Override
-    public boolean equals(Object obj) {
-        Queen next = (Queen)(obj);
-        return (next.indexOfX==this.indexOfX && next.indexOfY==this.indexOfY);
-}
+    public int getY() {
+        return Y;
+    }
+
+    public void moveEsquerda() {
+        Y--;
+    }
+
+    public void moveDireita() {
+        Y++;
+    }
+
 }

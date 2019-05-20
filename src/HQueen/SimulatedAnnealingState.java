@@ -6,51 +6,54 @@ package HQueen;
  * and open the template in the editor.
  */
 import java.util.Random;
+
 /**
  *
+ * @author Emerson Hoffmann
+ * @author Leonardo Aparecido Caracho
  * @author Victor Augusto Pozzan
+ * @author Vitor Lisboa Nogueira
  */
-class SimulatedAnnealingState extends  State{
-  Random randomGenerator = new Random();
+class SimulatedAnnealingState extends State {
 
-    public SimulatedAnnealingState(int boardSize) {
-        super(boardSize);
-        for (int i = 0; i < boardSize; i++) {
-            q[i] = new Queen(i, randomGenerator.nextInt(boardSize));
+    Random random = new Random();
+
+    //instancia o numero de rainha para cada posição no tabuleiro 
+    public SimulatedAnnealingState(int tamTabuleiro) {
+        super(tamTabuleiro);
+        for (int i = 0; i < tamTabuleiro; i++) {
+            queen[i] = new Queen(i, random.nextInt(tamTabuleiro));
         }
     }
 
-    public SimulatedAnnealingState(int boardSize, Queen q[]) {
-        super(boardSize);
-        this.q = q;
-        cost = 0;
+    //construtor quando for solucionar o problema
+    public SimulatedAnnealingState(int tamTabuleiro, Queen q[]) {
+        super(tamTabuleiro);
+        this.queen = q;
+        custo = 0;
     }
-    
+
+    //este metodo escolhe uma rainha aleatória de depois sorteia uma coluna aleatóriamente
+    //até que ela não seja igual ao valor anterior
+    //atualiza o estado da rainha 
+    //retorna tabuleiro e o proximo estado
     @Override
     public State getNextState() {
         int i;
-        Queen nextStateQueen[] = new Queen[boardSize];
-        //randomly pick a queen we want to change at a time.
-        int rand = randomGenerator.nextInt(boardSize);
+        Queen nextStateQueen[] = new Queen[tamTabuleiro];
+        int rand = random.nextInt(tamTabuleiro);
 
-        for (i = 0; i < boardSize; i++) {
-            nextStateQueen[i] = new Queen(q[i].getIndexOfX(),
-                    q[i].getIndexOfY());
-            //we only change that randomly picked queen in this state. 
-            //if the current queen is not the queen we picked
-            //the next state of that queen will be same as the previos queen.
+        for (i = 0; i < tamTabuleiro; i++) {
+            nextStateQueen[i] = new Queen(queen[i].getX(), queen[i].getY());
             if (rand == i) {
-                int temp = randomGenerator.nextInt(boardSize);
-                //this is to ensure that the new state will not be the same as the 
-                //previoius state
-                while (temp == q[i].getIndexOfY()) {
-                    temp = randomGenerator.nextInt(boardSize);
+                int temp = random.nextInt(tamTabuleiro);
+                while (temp == queen[i].getY()) {
+                    temp = random.nextInt(tamTabuleiro);
                 }
-                //new state will be added to the new state
-                nextStateQueen[i] = new Queen(q[i].getIndexOfX(), temp);
+                nextStateQueen[i] = new Queen(queen[i].getX(), temp);
             }
         }
 
-        return new SimulatedAnnealingState(boardSize, nextStateQueen);
+        return new SimulatedAnnealingState(tamTabuleiro, nextStateQueen);
     }
 }

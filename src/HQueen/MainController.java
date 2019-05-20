@@ -5,28 +5,26 @@
  */
 package HQueen;
 
-import java.awt.geom.Rectangle2D;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.scene.image.ImageView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Group;
-import javafx.scene.image.Image;
 
 /**
+ * Controller responsável pelas chamadas de randomizar o tabuleiro e solucinar o
+ * problema conforme as entradas do usuário cada @FXML é a declaração dos
+ * elementos na cena
  *
- * @author vitor
+ * @author Emerson Hoffmann
+ * @author Leonardo Aparecido Caracho
+ * @author Victor Augusto Pozzan
+ * @author Vitor Lisboa Nogueira
  */
 public class MainController implements Initializable {
-    
+
     ImageView tabuleiro[][];
-    
+
     @FXML
     private ImageView casa65;
 
@@ -218,46 +216,52 @@ public class MainController implements Initializable {
 
     @FXML
     private ImageView casa07;
-       
-    int tollerence = 0;
+
+    int tolerancia = 0;
     NQueen nq;
+
+    //função do botão solve, inicializa toda a matriz tabuleiro de ImageView como null
+    //é inicializado o tempo  
+    //executado o método nq.solve() e o tempo total da execuçãoe e por fim  mostra o tabuleiro no terminal e no display FXML  
     @FXML
-    public void solve(){  
-        long time;
-        for(int i = 0; i < 8; i++)
-        {
-            for(int j = 0; j< 8; j++)
-            {
+    public void solve() {
+        long tempo;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 tabuleiro[i][j].setImage(null);
             }
         }
- 
-        time = System.currentTimeMillis();
+
+        tempo = System.currentTimeMillis();
         nq.solve();
-        time = System.currentTimeMillis()-time;
+        tempo = System.currentTimeMillis() - tempo;
+        System.out.println("Tempo Total:" + tempo);
         nq.show(tabuleiro);
-        
-        System.out.println("Total Time taken :" + time);
-  
+
     }
+
+    /*função do botão Random Queens
+    inicializa toda a matriz tabuleiro de ImageView como null
+    inicializa o SimulatedAnnealing passando a tolerancia e a tempeatura
+    mostra a posição inicial
+     */
     @FXML
-    public void randomQueens(){   
-        
-        for(int i = 0; i < 8; i++)
-        {
-            for(int j = 0; j< 8; j++)
-            {
+    public void randomQueens() {
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
                 tabuleiro[i][j].setImage(null);
             }
         }
- 
+
         System.out.println("N = 8");
-        System.out.println("Simulated Annealing approach");
-        
-        nq = new SimulatedAnnealing(tollerence,1000);
+        System.out.println("Simulated Annealing");
+
+        nq = new SimulatedAnnealing(tolerancia, 1000);
         nq.showInicialPosition(tabuleiro);
     }
-    
+
+    //inicializa todas as posições do tabuleiro com uma casa 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         tabuleiro = new ImageView[8][8];
@@ -325,7 +329,6 @@ public class MainController implements Initializable {
         tabuleiro[5][7] = casa57;
         tabuleiro[6][7] = casa67;
         tabuleiro[7][7] = casa77;
-        
-        
+
     }
 }
